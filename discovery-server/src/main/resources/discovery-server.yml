@@ -19,5 +19,5 @@ logging:
     console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
   level:
     root: INFO
-    org.springframework: DEBUG
-    com.apress.cems: DEBUG
+    org.springframework: INFO
+    com.discovery.server: INFO
