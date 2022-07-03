@@ -14,7 +14,7 @@ public class DiscoveryServerApplication {
 	private static Logger logger = LoggerFactory.getLogger(DiscoveryServerApplication.class);
 	public static void main(String... args) throws IOException {
 		// Look for configuration in discovery.properties or discoveryserver.yml
-		System.setProperty("spring.config.name", "discovery-server.yml");
+		System.setProperty("spring.config.name", "discovery-server");
 		var ctx = SpringApplication.run(DiscoveryServerApplication.class, args);
 		assert (ctx != null);
 		logger.info("Started ...");
