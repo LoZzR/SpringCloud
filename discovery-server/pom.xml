@@ -17,6 +17,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<version>${spring-cloud.version}</version>
 		</dependency>
 
 		<dependency>
@@ -25,7 +26,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<dependencyManagement>
+	<!--<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
@@ -45,5 +46,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
+-->
 </project>
