@@ -21,9 +21,14 @@
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>2.2.1.RELEASE</spring-cloud.version>
+        <spring.version>5.2.3.RELEASE</spring.version>
+        <hibernate.version>5.4.10.Final</hibernate.version>
+        <javax.version>2.0.1.Final</javax.version>
+        <jackson.version>2.10.2</jackson.version>
     </properties>
 
     <modules>
         <module>discovery-server</module>
+        <module>entities</module>
     </modules>
 </project>
