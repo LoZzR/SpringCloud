@@ -17,7 +17,7 @@ import java.util.Objects;
 
 @Entity
 public class Person extends AbstractEntity {
-    interface BasicValidation{}
+    public interface BasicValidation{}
 
     @NotNull(groups = BasicValidation.class)
     @Size(min = 3, max = 30, groups = BasicValidation.class)

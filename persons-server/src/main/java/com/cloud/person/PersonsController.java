@@ -1,9 +1,5 @@
 package com.cloud.person;
 
-import com.entities.ex.NotFoundException;
-import com.entities.person.services.PersonService;
-import com.entities.util.CriteriaDto;
-import com.entities.util.NumberGenerator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -11,11 +7,18 @@ import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriTemplate;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Optional;
+
+import com.cloud.person.services.PersonService;
+import com.entities.ex.NotFoundException;
+import com.entities.util.CriteriaDto;
+import com.entities.util.NumberGenerator;
+import com.entities.person.Person;
 
 import static com.entities.base.AbstractEntity.COMPARATOR_BY_ID;
 

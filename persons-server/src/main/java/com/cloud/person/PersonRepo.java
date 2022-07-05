@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+import com.entities.person.*;
+
 public interface PersonRepo extends JpaRepository<Person, Long> {
 
     @Query("select p from Person p where p.username like %?1%")
