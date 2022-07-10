@@ -2,23 +2,15 @@ spring:
   application:
     name: persons-service # Service registers under this name
   datasource:
-    hikari:
-      driver-class-name: org.h2.Driver
-      jdbc-url: jdbc:h2:mem:personsdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-      username: sa
-      password:
-      maximum-pool-size: 5
-      connection-test-query: "SELECT 1"
-      pool-name: cemsPool
-      connection-timeout: 60000
-  jpa:
-    generate-ddl: true
-    hibernate:
-      ddl-auto: create-drop
-    database-platform: org.hibernate.dialect.H2Dialect
-  h2:
-    console:
-      enabled: true
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot
+    username: root
+    password:
+
+    jpa:
+      database: mysql
+      generate-ddl: true
+      hibernate.ddl-auto: create-drop
 # HTTP Server
 server:
   port: 4001   # HTTP (Tomcat) port
