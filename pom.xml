@@ -47,5 +47,6 @@
         <module>discovery-server</module>
         <module>entities</module>
         <module>persons-server</module>
+        <module>detectives-server</module>
     </modules>
 </project>
