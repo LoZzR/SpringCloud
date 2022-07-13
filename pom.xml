@@ -48,5 +48,6 @@
         <module>entities</module>
         <module>persons-server</module>
         <module>detectives-server</module>
+        <module>web-client</module>
     </modules>
 </project>

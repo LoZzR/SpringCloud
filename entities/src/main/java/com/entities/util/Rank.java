@@ -1,9 +1,5 @@
 package com.entities.util;
 
-/**
- * @author Iuliana Cosmina
- * @since 1.0
- */
 public enum Rank {
     TRAINEE(1),
     JUNIOR(2),
