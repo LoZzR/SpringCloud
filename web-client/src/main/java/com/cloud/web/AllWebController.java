@@ -6,14 +6,13 @@ import com.entities.person.Person;
 import com.entities.util.CriteriaDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Locale;
@@ -35,6 +34,16 @@ public class AllWebController {
         logger.info("Populating model with person list...");
         List<Person> persons =  allWebServices.getAllPersons();
         return persons;
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping(path = "/search")
+    public List<Person> processSubmit(@Validated @RequestBody CriteriaDto criteria) {
+        try {
+            return allWebServices.getByCriteriaDto(criteria);
+        } catch (InvalidCriteriaException ice) {
+            throw  new RuntimeException();
+        }
     }
 
     @GetMapping(value = "/persons/{id}")
